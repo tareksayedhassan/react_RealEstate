@@ -1,0 +1,42 @@
+/* f-container - تنسيق الفوتر الرئيسي */
+.f-container {
+  display: flex;
+  justify-content: space-between; /* توزيع المحتوى بين اليسار واليمين */
+  align-items: flex-start; /* محاذاة العناصر للأعلى */
+}
+
+/* f-left - تنسيق الجانب الأيسر */
+.f-left {
+  display: flex;
+  flex-direction: column; /* العناصر تكون عمودية */
+  gap: 1rem; /* مسافة بين العناصر */
+}
+
+/* f-menu - تنسيق قائمة المعلومات */
+.f-menu {
+  display: flex;
+  gap: 1.5rem; /* مسافة بين العناصر */
+  margin-top: 1.5rem; /* مسافة فوق القائمة */
+  font-weight: 500; /* جعل الخط ثقيل */
+}
+
+/* تعديل الـ media query للشاشات الصغيرة */
+@media (max-width: 768px) {
+  /* تعديل توزيع العناصر في الفوتر */
+  .f-container {
+    justify-content: center; /* محاذاة العناصر في المنتصف */
+    text-align: center; /* محاذاة النصوص في المنتصف */
+  }
+
+  /* تنسيق العناصر داخل .f-container بشكل مركزي */
+  .f-container > div {
+    align-items: center !important; /* محاذاة العناصر في المنتصف */
+    text-align: center; /* محاذاة النصوص في المنتصف */
+  }
+
+  /* تخصيص النصوص داخل f-menu ليظهروا بشكل مركزي */
+  .f-menu {
+    flex-direction: column; /* تحويل القائمة من صف إلى عمود */
+    gap: 1rem; /* مسافة بين العناصر عموديًا */
+  }
+}

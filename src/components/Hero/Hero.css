@@ -1,0 +1,274 @@
+.hero-wrapper {
+  color: white;
+  position: relative;
+  padding-bottom: 2rem;
+  z-index: 1;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2rem 0;
+}
+
+/* left side */
+.hero-left {
+  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-title {
+  font-weight: 600;
+  font-size: 3.8rem;
+  line-height: 5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.orange-circle {
+  height: 4rem;
+  width: 4rem;
+  background: var(--orange-gradient);
+  border-radius: 999px;
+  position: absolute;
+  right: 30%;
+  top: -7%;
+  z-index: -1;
+}
+
+.hero-des span {
+  display: block;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.search-bar {
+  display: inline-flex; /* Using inline-flex for correct alignment */
+  background-color: white;
+  border-radius: 5px;
+  border: 3px solid rgba(120, 120, 120, 0.374);
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  padding: 0.5rem;
+}
+
+.search-bar > input {
+  border: none;
+  outline: none;
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
+/* Stats section */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  flex-direction: row; /* Always row */
+  width: 100%;
+}
+
+.stat > :nth-child(1) {
+  font-size: 2rem;
+}
+
+.stat > :nth-child(1) > :last-child {
+  color: orange;
+}
+
+/* right side */
+.image-container {
+  width: 30rem;
+  height: 35rem;
+  overflow: hidden;
+  border-radius: 15rem 15rem 0 0;
+  border: 8px solid rgba(255, 255, 255, 0.12);
+}
+
+.image-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Menu Icon */
+.menu-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Menu */
+.menu {
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu li {
+  color: white;
+  padding: 0.5rem 0;
+}
+
+/* Responsive styles for mobile (up to 480px) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  .search-bar {
+    max-width: 100%; /* Full width on small screens */
+    padding: 0.3rem;
+  }
+  .search-bar > input {
+    padding: 0.3rem;
+  }
+  .image-container {
+    width: 100%;
+    height: 20rem;
+  }
+  .stats {
+    flex-wrap: wrap; /* Allow elements to wrap */
+    justify-content: space-between;
+    gap: 1rem; /* Small gap between items */
+    flex-direction: row; /* Keep row layout */
+  }
+  .stat > :nth-child(1) {
+    font-size: 1.2rem;
+  }
+  .stat > :nth-child(2) {
+    font-size: 0.7rem;
+  }
+}
+
+/* Responsive styles for small tablets (481px - 640px) */
+@media (min-width: 481px) and (max-width: 640px) {
+  .hero-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .image-container {
+    width: 95%;
+    height: 25rem;
+  }
+  .stats {
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-direction: row;
+  }
+  .stat > :nth-child(1) {
+    font-size: 1.5rem;
+  }
+  .stat > :nth-child(2) {
+    font-size: 0.8rem;
+  }
+}
+
+/* Responsive styles for tablets (641px - 1024px) */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero-title {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  .image-container {
+    width: 28rem;
+    height: 32rem;
+  }
+  .search-bar {
+    max-width: 80%;
+  }
+  .stats {
+    justify-content: space-between;
+    gap: 2rem;
+    flex-direction: row;
+  }
+  .stat > :nth-child(1) {
+    font-size: 1.8rem;
+  }
+  .stat > :nth-child(2) {
+    font-size: 0.9rem;
+  }
+}
+
+/* Responsive styles for desktops (1025px and up) */
+@media (min-width: 1025px) {
+  .hero-title {
+    font-size: 3.8rem;
+    line-height: 5rem;
+  }
+  .image-container {
+    width: 30rem;
+    height: 35rem;
+  }
+  .search-bar {
+    max-width: 600px;
+  }
+  .stats {
+    justify-content: space-between;
+    gap: 3rem;
+    flex-direction: row;
+  }
+  .stat > :nth-child(1) {
+    font-size: 2rem;
+  }
+  .stat > :nth-child(2) {
+    font-size: 1rem;
+  }
+}
+/* Responsive styles for very small screens (up to 320px) */
+@media (max-width: 320px) {
+  .hero-title {
+    font-size: 1.8rem;
+    line-height: 2.3rem;
+  }
+
+  .search-bar {
+    max-width: 100%;
+    padding: 0.2rem; /* تصغير البادينج */
+    height: 2.2rem; /* تقليل الارتفاع */
+    border-radius: 5px; /* حواف بسيطة */
+  }
+
+  .search-bar > input {
+    padding: 0.2rem;
+    font-size: 0.8rem; /* تصغير النص */
+  }
+
+  .image-container {
+    width: 100%;
+    height: 18rem; /* حجم أصغر للصورة */
+  }
+
+  .stats {
+    gap: 0.5rem; /* تقليل المسافة بين العناصر */
+    flex-direction: row; /* المحافظة على الصف */
+    flex-wrap: wrap; /* السماح بتوزيع العناصر */
+  }
+
+  .stat > :nth-child(1) {
+    font-size: 1rem;
+  }
+
+  .stat > :nth-child(2) {
+    font-size: 0.6rem;
+  }
+}
